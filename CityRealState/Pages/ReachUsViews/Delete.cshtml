@@ -1,0 +1,55 @@
+﻿@page
+@model CityRealEstate.Pages.ReachUsViews.DeleteModel
+
+@{
+    ViewData["Title"] = "Reach Us";
+}
+<h3>Are you sure you want to delete this?</h3>
+<div>
+
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.ReachUs.Name)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ReachUs.Email)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ReachUs.Contact)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ReachUs.Address)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ReachUs.Message)
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    @Html.DisplayFor(model => model.ReachUs.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.ReachUs.Email)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.ReachUs.Contact)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.ReachUs.Address)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.ReachUs.Message)
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <form method="post">
+        <input type="hidden" asp-for="ReachUs.id" />
+        <input type="submit" value="Delete" class="btn btn-danger" />
+        <a asp-page="./Index" type="button" class="btn btn-info">Back to List</a>
+    </form>
+</div>

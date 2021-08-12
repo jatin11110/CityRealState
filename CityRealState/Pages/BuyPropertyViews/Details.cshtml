@@ -1,0 +1,68 @@
+﻿@page
+@model CityRealEstate.Pages.BuyPropertyViews.DetailsModel
+
+@{
+    ViewData["Title"] = "Property";
+}
+
+<div>
+    <h4>Property</h4>
+    <hr />
+
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.BuyProperty.Name)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.BuyProperty.PropertyId)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.BuyProperty.Contact)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.BuyProperty.Dimentions)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.BuyProperty.State)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.BuyProperty.City)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.BuyProperty.PinCode)
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    @Html.DisplayFor(model => model.BuyProperty.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.BuyProperty.PropertyId)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.BuyProperty.Contact)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.BuyProperty.Dimentions)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.BuyProperty.State)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.BuyProperty.City)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.BuyProperty.PinCode)
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.BuyProperty.id"  type="button" class="btn btn-info">Edit</a> |
+    <a asp-page="./Index" type="button" class="btn btn-info">Back to List</a>
+</div>

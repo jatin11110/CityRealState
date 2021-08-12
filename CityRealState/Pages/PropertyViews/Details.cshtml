@@ -1,0 +1,61 @@
+﻿@page
+@model CityRealEstate.Pages.PropertyViews.DetailsModel
+
+@{
+    ViewData["Title"] = "Property";
+}
+
+<div>
+    <h4>Property</h4>
+    <hr />
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Property.TypeOfProperty)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Property.Dimentions)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Property.State)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Property.City)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Property.PinCode)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Property.Rate)
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    @Html.DisplayFor(model => model.Property.TypeOfProperty)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.Property.Dimentions)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.Property.State)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.Property.City)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.Property.PinCode)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.Property.Rate)
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Property.Id"  type="button" class="btn btn-info">Edit</a>
+    <a asp-page="./Index"  type="button" class="btn btn-info">Back to List</a>
+</div>

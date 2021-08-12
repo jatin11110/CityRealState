@@ -1,0 +1,55 @@
+﻿@page
+@model CityRealEstate.Pages.ReachUsViews.DetailsModel
+
+@{
+    ViewData["Title"] = "Reach Us";
+}
+
+<div>
+    <h4>Reach Us</h4>
+    <hr />
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.ReachUs.Name)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ReachUs.Email)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ReachUs.Contact)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ReachUs.Address)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ReachUs.Message)
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    @Html.DisplayFor(model => model.ReachUs.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.ReachUs.Email)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.ReachUs.Contact)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.ReachUs.Address)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.ReachUs.Message)
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.ReachUs.id"  type="button" class="btn btn-info">Edit</a> |
+    <a asp-page="./Index"  type="button" class="btn btn-info">Back to List</a>
+</div>
